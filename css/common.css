@@ -327,6 +327,16 @@ sub
 
 /* COLUMNS */
 
+.partners {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.partner-logo {
+    margin: 10px;
+}
+
 .one,  .one_half,  .one_third,  .two_third,  .three_fourth, 
 .one_fourth{
     margin-right: 12%;

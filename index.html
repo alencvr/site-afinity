@@ -7,17 +7,15 @@
           <meta name="author" content="BlackCat" />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-          <link rel="shortcut icon" href="images/favicon.ico" />    
+          <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+          
           <link href='http://fonts.googleapis.com/css?family=League+Script%7CPoppins:300,400,500,600,700%7CMontserrat:900' rel='stylesheet' type='text/css'>		
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
           <link rel="stylesheet" type="text/css"  href='style.css' />
 
-          <!--[if lt IE 9]>
-                  <script src="js/html5.js"></script>            
-                  <script src="js/respond.min.js"></script>                   
-          <![endif]-->         
+              
       </head>
 
       <body>
@@ -55,13 +53,13 @@
                                       <a href="#about">Quem somos</a>
                                   </li>
                                   <li>
+                                      <a href="#services">Franquia</a>
+                                  </li>
+                                  <li>
                                       <a href="#clients">Parceiros</a>
                                   </li>
                                   <li>
                                       <a href="#portfolio">Produtos</a>
-                                  </li>
-                                  <li>
-                                      <a href="#services">Franquia</a>
                                   </li>
                                   <li>
                                       <a href="#contact">Contato</a>
@@ -79,26 +77,26 @@
                  
                   <div id="home" class="section">   
                       <div class="block content-1070 center-relative section-content">  
-                          <div class="gradient-overlay">
-                            <video autoplay loop muted poster="./images/hero_img2.jpg" id="bgvideo">
-                              <source src="./videos/video_preview_h264.mp4" type="video/mp4" >
-                            </video>
+                        <video id="bgvideo" autoplay loop muted > 
+                          <source src="./videos/video_preview_h264.mp4" type="video/mp4" >
+                        </video>
+                        <div class="gradient-overlay">
                           </div>
                           
                           <img class="logo-home center" src="./images/afinitywhite-logo.svg" alt="Logo Afinity">
-                          <!-- <h1 class="curve-text center">Afinity</h1> -->
+                          
                             <p class="intro-description center">Somos pessoas protegendo pessoas.</p>
                             <p>&nbsp;</p>
                             <p>&nbsp;</p>
-                            <div class="center-text" id="first-button">
-                              <a href="#about" target="_self" class="button scroll">Conheça nossa história</a>
                           </div>
-                            <div class="icon-scroll"></div>                
-                          </div>
-                          
+                          <div class="center-text" id="first-button">
+                            <a href="#about" target="_self" class="button scroll">Conheça nossa história</a>
+                        </div>
+                          <div class="icon-scroll"></div>                
+                            
                         </div>  
-
-                  <!-- ABOUT SECTION -->
+                          
+                          <!-- ABOUT SECTION -->
 
                   <div id="about" class="section">   
                     <div class="block content-1070 center-relative section-content">  
@@ -117,7 +115,7 @@
 
                         </div>
                         <div class="one_half last animate">
-                            <a class="video-popup-holder" href="https://vimeo.com/157276599" data-rel="prettyPhoto[gallery-video1]">
+                            <a class="video-popup-holder" href="https://vimeo.com/453650030" data-rel="prettyPhoto[gallery-video1]">
                                 <img class="thumb" src="images/about_img2.jpg" alt="" />
                                 <p class="popup-play"></p>
                             </a>
@@ -126,6 +124,50 @@
                         
                     </div>
                 </div> 
+
+                <!-- FRANQUEADO SECTION -->
+
+                <div id="services" class="section">   
+                  <div class="block content-1070 center-relative section-content">  
+                      <h2 class="entry-title">FRANQUIA</h2>
+                      <p class="page-description">Com a Afinity você tem a franquia de menor investimento inicial <br> e o melhor custo benefício do mercado de seguros. </p>
+
+                      <div class="one_third animate">
+                          <div class="service-item relative">
+                              <img class="service-icon" src="./images/icon_01.png" alt="">
+                              <h5 class="service-title">Estabilidade Financeira</h5>
+                              <div class="service-content">
+                                Aumente seus lucros trabalhando para si mesmo. Com a franquia Afinity, você pode ganhar entre R$ 5 e R$ 10 mil por mês.
+                              </div>
+                              <a class="service-link scroll" href="#contact" target="_self"></a>
+                          </div>
+                      </div>
+
+                      <div class="one_third animate wait-03s">
+                          <div class="service-item relative">
+                              <img class="service-icon" src="./images/icon_02.png" alt="">
+                              <h5 class="service-title">Crescimento de Mercado</h5>
+                              <div class="service-content">
+                                Apenas 20% dos brasileiros possuem algum tipo de seguro, um enorme mercado a ser explorado com foco em proteção de vida e patrimônio.
+                              </div>
+                              <a class="service-link scroll" href="#contact" target="_self"></a>
+                          </div>
+                      </div>
+
+                      <div class="one_third last animate wait-06s">
+                          <div class="service-item relative ">
+                              <img class="service-icon" src="./images/icon_03.png" alt="">
+                              <h5 class="service-title">Home <br> Office</h5>
+                              <div class="service-content">
+                                Qualifique sua vida profissional garantindo horários flexíveis, garantindo mais autonomia e liberdade para seu sucesso pessoal. 
+                              </div>
+                              <a class="service-link scroll" href="#contact" target="_self"></a>
+                          </div>
+                      </div>
+
+                      <div class="clear"></div>
+                  </div>
+              </div>  
 
                 <!-- CLIENTS SECTION -->
 
@@ -145,38 +187,21 @@
                           <p class="big-down-text">clientes em seguros</p>
                       </div>
                   </div>
-                  <div class="block content-1070 center-relative section-content">
-                      <div class="one_fourth ">
-                          <img src="images/client_logo_01.png" alt="" />                        
-                          <img src="images/client_logo_05.png" alt="" />                        
-                      </div>
-                      <div class="one_fourth ">
-                          <img src="images/client_logo_02.png" alt="" />                        
-                          <img src="images/client_logo_06.png" alt="" />
-                      </div>
-                      <div class="one_fourth ">
-                          <img src="images/client_logo_03.png" alt="" />                        
-                          <img src="images/client_logo_07.png" alt="" />
-                      </div>
-                      <div class="one_fourth last ">
-                          <img src="images/client_logo_04.png" alt="" />                        
-                          <img src="images/client_logo_08.png" alt="" />
-                      </div>
-                      <div class="one_fourth ">
-                        <img src="images/client_logo_09.png" alt="" />                        
-                                               
-                    </div>
-                    <div class="one_fourth ">
-                        <img src="images/client_logo_10.png" alt="" />                        
-                        
-                    </div>
-                    <div class="one_fourth ">
-                        <img src="images/client_logo_11.png" alt="" />                        
+                  <div class="center-relative section-content clients">
+                    <div class="partners">
+                      <img class="partner-logo" src="./images/client_logo_01.png" alt="Icatu Seguros">
+                      <img class="partner-logo" src="./images/client_logo_02.png" alt="Sul América Seguros">
+                      <img class="partner-logo" src="./images/client_logo_03.png" alt="Unimed Seguros">
+                      <img class="partner-logo" src="./images/client_logo_04.png" alt="Tokyo Marine Seguradora">
+                      <img class="partner-logo" src="./images/client_logo_05.png" alt="Capemisa Seguradora">
+                      <img class="partner-logo" src="./images/client_logo_06.png" alt="Bradesco Seguros">
+                      <img class="partner-logo" src="./images/client_logo_07.png" alt="Porto Seguro Seguradora">
+                      <img class="partner-logo" src="./images/client_logo_08.png" alt="Liberty Seguros">
+                      <img class="partner-logo" src="./images/client_logo_09.png" alt="Sompo Seguros">
+                      <img class="partner-logo" src="./images/client_logo_10.png" alt="HDI Seguros">
                       
                     </div>
-                    <div class="one_fourth last ">
-                        <img src="images/client_logo_12.png" alt="" />                        
-                    </div>
+      
                       
                       <div class="clear"></div>
                       <p>&nbsp;</p>
@@ -244,104 +269,117 @@
                           <div class="grid" id="portfolio-grid">
                               <div class="grid-sizer"></div>
 
-                              <div class="grid-item element-item post">
-                                  <a class="item-link" href="portfolio-item-1.html">
-                                      <img src="images/thumb_porfolio_img_01.jpg"  alt="" />
+                              <div class="grid-item element-item external">
+                                <a class="item-link" href="#portfolio">
+                                  <img src="./images/thumb_porfolio_img_01.jpg"  alt="" />
+                                    <div class="portfolio-text-holder">
+                                        <p class="portfolio-arrow"></p>
+                                        <p class="portfolio-title">Seguro de Vida</p>
+                                        <p class="portfolio-desc">Ajuda você e seus familiares a enfrentarem situações delicadas.</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                              <div class="grid-item element-item video">
+                                  <a class="item-link" href="#portfolio">
+                                      <img src="./images/thumb_porfolio_img_02.jpg"  alt="" />
                                       <div class="portfolio-text-holder">
                                           <p class="portfolio-arrow"></p>
-                                          <p class="portfolio-title">Seguro Saúde</p>
-                                          <p class="portfolio-desc">Assegura qualidade de vida e bem-estar</p>
+                                          <p class="portfolio-title">Seguro de Automóvel</p>
+                                          <p class="portfolio-desc">Protege seu veículo contra imprevistos.</p>
                                       </div>
                                   </a>
                               </div>
 
                               <div class="grid-item element-item video">
-                                  <a class="item-link" href="portfolio-item-1.html">
-                                      <img src="images/thumb_porfolio_img_02.jpg" alt="">
+                                  <a class="item-link" href="#portfolio">
+                                      <img src="./images/thumb_porfolio_img_03.jpg" alt="">
+                                      <div class="portfolio-text-holder">
+                                          <p class="portfolio-arrow"></p>
+                                          <p class="portfolio-title">Consórcio</p>
+                                          <p class="portfolio-desc">Forma mais vantajosa e segura de conquistar seu imóvel e automóvel.</p>
+                                      </div>
+                                  </a>
+                              </div>
+
+                              
+
+                              <div class="grid-item element-item post">
+                                <a class="item-link" href="#portfolio">
+                                      <img src="./images/thumb_porfolio_img_04.jpg" alt="" />
                                       <div class="portfolio-text-holder">
                                           <p class="portfolio-arrow"></p>
                                           <p class="portfolio-title">Previdência Privada</p>
-                                          <p class="portfolio-desc">Complemento para sua aposentadoria</p>
+                                          <p class="portfolio-desc">Complemento para sua aposentadoria.</p>
                                       </div>
                                   </a>
                               </div>
 
                               <div class="grid-item element-item image">
-                                  <a class="item-link" href="images/large_porfolio_img_03.jpg" data-rel="prettyPhoto[gallery1]">
-                                      <img src="images/thumb_porfolio_img_03.jpg" alt="" />
+                                <a class="item-link" href="portfolio-item-1.html">
+                                      <img src="./images/thumb_porfolio_img_05.jpg" alt="" /> 
                                       <div class="portfolio-text-holder">
                                           <p class="portfolio-arrow"></p>
-                                          <p class="portfolio-title">At Work</p>
-                                          <p class="portfolio-desc">Preserve and cherish</p>
-                                      </div>
-                                  </a>
-                              </div>
-
-                              <div class="grid-item element-item image">
-                                  <a class="item-link" href="images/large_porfolio_img_04.jpg" data-rel="prettyPhoto[gallery1]">
-                                      <img src="images/thumb_porfolio_img_04.jpg" alt="" />
-                                      <div class="portfolio-text-holder">
-                                          <p class="portfolio-arrow"></p>
-                                          <p class="portfolio-title">Coffe Cup</p>
-                                          <p class="portfolio-desc">Photoshop Mockup</p>
+                                          <p class="portfolio-title">Seguro Saúde</p>
+                                          <p class="portfolio-desc">Assegura qualidade de vida e bem-estar.</p>
                                       </div>
                                   </a>
                               </div>
 
                               <div class="grid-item element-item post">
-                                  <a class="item-link" href="portfolio-item-2.html">
-                                      <img src="images/thumb_porfolio_img_05.jpg" alt="" /> 
+                                <a class="item-link" href="#portfolio">
+                                      <img src="./images/thumb_porfolio_img_06.jpg" alt="" />
                                       <div class="portfolio-text-holder">
                                           <p class="portfolio-arrow"></p>
-                                          <p class="portfolio-title">Corporate Mockup</p>
-                                          <p class="portfolio-desc">Corporate Identity</p>
+                                          <p class="portfolio-title">Responsabilidade Civil</p>
+                                          <p class="portfolio-desc">Prevê o reembolso referente a indenizações por danos corporais ou materiais.</p>
                                       </div>
                                   </a>
                               </div>
 
                               <div class="grid-item element-item post">
-                                  <a class="item-link" href="portfolio-item-3.html">
-                                      <img src="images/thumb_porfolio_img_06.jpg" alt="" />
+                                <a class="item-link" href="#portfolio">
+                                      <img src="./images/thumb_porfolio_img_07.jpg" alt="" />
                                       <div class="portfolio-text-holder">
                                           <p class="portfolio-arrow"></p>
-                                          <p class="portfolio-title">Stamp</p>
-                                          <p class="portfolio-desc">Photoshop Mockup</p>
+                                          <p class="portfolio-title">Seguro Residencial</p>
+                                          <p class="portfolio-desc">Proteção aos imóveis destinados à moradia.</p>
                                       </div>
                                   </a>
                               </div>
 
-                              <div class="grid-item element-item external">
-                                  <a class="item-link" href="https://themeforest.net/item/opta-minimal-portfolio-and-photography-wordpress-theme/19536077?ref=CocoBasic" target="_blank">
-                                      <img src="images/thumb_porfolio_img_07.jpg" alt="" />
+                              <div class="grid-item element-item post">
+                                <a class="item-link" href="#portfolio">
+                                      <img src="./images/thumb_porfolio_img_08.jpg" alt="" />
                                       <div class="portfolio-text-holder">
                                           <p class="portfolio-arrow"></p>
-                                          <p class="portfolio-title">Web Design</p>
-                                          <p class="portfolio-desc">Wordpress</p>
+                                          <p class="portfolio-title">Seguro Empresarial</p>
+                                          <p class="portfolio-desc">Protege a sua empresa contra possíveis danos ao prédio e seu conteúdo.</p>
                                       </div>
                                   </a>
                               </div>
 
                               <div class="grid-item element-item image">
-                                  <a class="item-link" href="images/large_porfolio_img_08.png" data-rel="prettyPhoto[gallery1]">
-                                      <img src="images/thumb_porfolio_img_08.jpg" alt="" />
+                                <a class="item-link" href="#portfolio">
+                                      <img src="./images/thumb_porfolio_img_09.jpg" alt="" />
                                       <div class="portfolio-text-holder">
                                           <p class="portfolio-arrow"></p>
-                                          <p class="portfolio-title">Smart Watch</p>
-                                          <p class="portfolio-desc">Photoshop Mockup</p>
+                                          <p class="portfolio-title">Odontológico</p>
+                                          <p class="portfolio-desc">Cuide de sua saúde bucal tendo acesso a uma ampla rede de atendimento.</p>
                                       </div>
                                   </a>
                               </div>
 
-                              <div class="grid-item element-item video">
-                                  <a class="item-link" href="https://vimeo.com/157276599" data-rel="prettyPhoto[gallery1]">
-                                      <img src="images/thumb_porfolio_img_09.jpg" alt="" />
-                                      <div class="portfolio-text-holder">
-                                          <p class="portfolio-arrow"></p>
-                                          <p class="portfolio-title">Mobile App</p>
-                                          <p class="portfolio-desc">User Interface</p>
-                                      </div>
-                                  </a>
-                              </div>
+                              <div class="grid-item element-item image">
+                                <a class="item-link" href="#portfolio">
+                                    <img src="./images/thumb_porfolio_img_10.jpg" alt="" />
+                                    <div class="portfolio-text-holder">
+                                        <p class="portfolio-arrow"></p>
+                                        <p class="portfolio-title">Diária de Incapacidade Temporária</p>
+                                        <p class="portfolio-desc">Indenizar o segurado em caso de afastamento das suas atividades profissionais.</p>
+                                    </div>
+                                </a>
+                            </div>
 
                           </div>
                           <div class="clear"></div>                            
@@ -349,50 +387,6 @@
                   </div>
               </div>
 
-              
-                  <!-- FRANQUEADO SECTION -->
-
-                  <div id="services" class="section">   
-                      <div class="block content-1070 center-relative section-content">  
-                          <h2 class="entry-title">FRANQUIA</h2>
-                          <p class="page-description">Com a Afinity você tem a franquia de menor investimento inicial <br> e o melhor custo benefício do mercado de seguros. </p>
-
-                          <div class="one_third animate">
-                              <div class="service-item relative">
-                                  <img class="service-icon" src="images/icon_01.png" alt="">
-                                  <h5 class="service-title">Estabilidade Financeira</h5>
-                                  <div class="service-content">
-                                    Aumente seus lucros trabalhando para si mesmo. Com a franquia Afinity, você pode ganhar entre R$ 5 e R$ 10 mil por mês.
-                                  </div>
-                                  <a class="service-link scroll" href="#contact" target="_self"></a>
-                              </div>
-                          </div>
-
-                          <div class="one_third animate wait-03s">
-                              <div class="service-item relative">
-                                  <img class="service-icon" src="images/icon_02.png" alt="">
-                                  <h5 class="service-title">Crescimento de Mercado</h5>
-                                  <div class="service-content">
-                                    Apenas 20% dos brasileiros possuem algum tipo de seguro, um enorme mercado a ser explorado com foco em proteção de vida e patrimônio.
-                                  </div>
-                                  <a class="service-link scroll" href="#contact" target="_self"></a>
-                              </div>
-                          </div>
-
-                          <div class="one_third last animate wait-06s">
-                              <div class="service-item relative ">
-                                  <img class="service-icon" src="images/icon_03.png" alt="">
-                                  <h5 class="service-title">Home <br> Office</h5>
-                                  <div class="service-content">
-                                    Qualifique sua vida profissional garantindo horários flexíveis, garantindo mais autonomia e liberdade para seu sucesso pessoal. 
-                                  </div>
-                                  <a class="service-link scroll" href="#contact" target="_self"></a>
-                              </div>
-                          </div>
-
-                          <div class="clear"></div>
-                      </div>
-                  </div>  
 
                   <!-- CONTACT SECTION -->
 
@@ -418,7 +412,7 @@
                                     <p class="contact-info-content">(85) 3268 - 2070</p>
                                   </div>
                                   <div class="contact-info">
-                                    <span class="fa fa-globe"></span>
+                                    <img class="chat-icon" src="./images/chat-icon.png" alt="Chat Icon">
                                     <p class="contact-info-content">
                                       (85) 9 9965 - 0809</p>
                                     </div>
@@ -456,9 +450,9 @@
 
                       <ul class="copyright-holder">
                           <li class="copyright-footer">
-                              © Grupo Afinity - 25 anos cuidando e protegendo as famílias brasileiras.</li>
+                              © Grupo Afinity - Cuidando e protegendo você.</li>
                           <li class="social-footer">                
-                            <a href="https://www.instagram.com/afinitycorretora/" target="_blank">Instagram</a><a href="https://www.facebook.com/AfinityCorretora" target="_blank">Facebook</a><a href="https://www.linkedin.com/company/grupoafinity/" target="_blank">LinkedIn</a><a href="https://api.whatsapp.com/message/SERKQMWUPVK3O1?autoload=1&app_absent=0" target="_blank">Whatsapp</a>      </li>            
+                            Powered by <a href="https://www.linkedin.com/in/lucas-alencar-948621162/" target="_blank">Alencar.</a>      </li>            
                           </ul>
                           
                   </div>

@@ -402,10 +402,10 @@ var SendMail = function () {
                         error = "Page not found!";
                         break;
                     case "500":
-                        error = "Server is currently unavailable!";
+                        error = "Servidor está temporariamente indisponível!";
                         break;
                     default:
-                        error = "Unespected error, please try again later.";
+                        error = "Erro inesperado, tente novamente depois.";
                 }
                 if (error) {
                     alert(error);
@@ -414,6 +414,6 @@ var SendMail = function () {
         });
     } else
     {
-        alert('Your email is not in valid format');
+        alert('Seu e-mail não está em um formato válido.');
     }
 };

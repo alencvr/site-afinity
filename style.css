@@ -174,7 +174,7 @@ body p, body pre
 .header-holder
 {
     z-index: 99 !important;
-    background-color: var(--first-color);
+    background-color: var(--second-color);
     width: 100% !important;
     top: 0;
     position: fixed;
@@ -276,11 +276,14 @@ body p, body pre
     padding-right: 35px !important;
 }
 
-body .site-wrapper .sm-clean a 
+ body .site-wrapper .sm-clean a 
 {
     cursor: pointer;
     color: var(--white-color);
-}
+} 
+
+
+
 
 .sm-clean a span.sub-arrow 
 {
@@ -313,7 +316,7 @@ body .site-wrapper .sm-clean a
 
 body .sm-clean a:hover, body .main-menu.sm-clean .sub-menu li a:hover, body .sm-clean li.active a, body .sm-clean li.current-page-ancestor > a, body .sm-clean li.current_page_ancestor > a, body .sm-clean li.current_page_item > a
 {
-    color: var(--third-color);
+    color: var(--first-color);
 }
 
 .sm-clean li 
@@ -355,7 +358,7 @@ a.button
 {
     display: inline-block;
     color: var(--white-color) !important;
-    background-image: var(--gradient1);
+    background-image: var(--gradient2);
     text-align: left;
     padding-bottom: 17px;
     padding-top: 17px;
@@ -368,7 +371,8 @@ a.button
     margin-bottom: 17px;
     border-radius: 50px;
     font-size: 16px;    
-    box-shadow: 0px 0px 50px 0px rgba(109, 109, 246, 0.6);
+    box-shadow: 0px 0px 50px 0px rgba(109, 109, 246, 0.4);
+    z-index: 20;
 }
 
 a.button:after 
@@ -553,14 +557,6 @@ a.button.scroll:hover:after
     line-height: 150px;
 }
 
-@media screen and (min-height: 950px) 
-{  
-    #home .curve-text 
-    {
-        padding-top: 10%;
-    }
-}
-
 .intro-description
 {
     font-size: 32px;
@@ -622,7 +618,7 @@ a.button.scroll:hover:after
     line-height: 40px;
     font-weight: 700;
     margin-bottom: 100px;
-    color: var(--first-color);
+    color: var(--second-color);
 }
 
 .page-description1 {
@@ -630,7 +626,7 @@ a.button.scroll:hover:after
     font-size: 24px;
     line-height: 40px;
     font-weight: 700;
-    margin-bottom: 25px;
+    margin-bottom: 29px;
     color: var(--first-color);
 }
 
@@ -646,17 +642,27 @@ a.button.scroll:hover:after
     2. Home Section CSS
 ====================================== */
 
+#home{
+    background-color: var(--second-color);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: calc(100vh - 220px);
+    z-index: -20;
+}
+
 #bgvideo {
   position: fixed;
     right: 0;
     bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
     width: auto;
     height: auto;
     z-index: -10;
-    background: url(../images/hero-bg.jpg) top center no-repeat;
-    background-size: cover;
+    object-fit: cover;
+   
 }
 
 .gradient-overlay:before {
@@ -667,21 +673,12 @@ a.button.scroll:hover:after
   position: absolute;
   z-index: -9;
   content: '';
-  background-image: var(--gradient1);
-  opacity: 0.5;
+  background-image: var(--gradient2);
+  opacity: 0.6;
+  
 }
 
-#home
-{
-    background-image: url(images/hero_img2.jpg);
-    background-color: #eb09eb;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: calc(100vh - 220px);
-    z-index: -20;
-}
+
 
 .logo-home {
   display: block;
@@ -754,7 +751,7 @@ a.button.scroll:hover:after
 #services
 {
     background-image: url(images/team_bg.jpg);
-    background-color: #efefef;
+    background-color: var(--white-color);
     background-position: left top;
     background-repeat: repeat;
     background-size: auto;
@@ -858,7 +855,7 @@ a.service-link:after
 {
     display: inline-block;
     margin-right: 15px;
-    color: #3e275f;
+    color: var(--first-color);
     transition: all .3s ease;
     border-radius: 50px !important;
     padding: 15px 25px 15px 25px;
@@ -874,7 +871,7 @@ a.service-link:after
 {
     background-color: var(--second-color);
     color: var(--white-color);    
-    box-shadow: 0px 0px 50px 0px rgba(109, 109, 246, 0.6);
+    box-shadow: 0px 0px 50px 0px rgba(109, 109, 246, 0.4);
 }
 
 .grid 
@@ -949,7 +946,7 @@ a.service-link:after
 {
     display: inline-block;
     color: var(--white-color);
-    background-color: var(--second-color);
+    background-color: var(--third-color);
     text-align: left;
     cursor: pointer;
     vertical-align: middle;
@@ -992,6 +989,7 @@ a.service-link:after
 {
     font-size: 16px;
     line-height: 24px;
+    max-width: 410px;
 }
 
 .grid-item a.item-link:hover:after
@@ -1330,6 +1328,12 @@ a.video-popup-holder:hover .popup-play
     padding-bottom: 0;
 }
 
+.clients {
+    max-width: 1350px;
+    width: auto;
+    
+}
+
 .big-number-full-width
 {
     background-image: url("images/stats_bg.png");
@@ -1342,7 +1346,7 @@ a.video-popup-holder:hover .popup-play
 
 .big-number 
 {
-    color: var(--first-color);
+    color: var(--second-color);
     text-align: center;
     margin-bottom: 85px;
     padding: 13px 0;
@@ -1948,6 +1952,7 @@ body .social a
 }    
 
 
+
 .logos-social {
   text-align: center;
   margin-top: 25px;
@@ -1974,7 +1979,7 @@ body .social a
 
 .contact-page-left 
 {
-    background-color: var(--first-color);
+    background-color: var(--second-color);
     width: calc(50% - 140px);
     height: calc(100% - 200px);
     float: left;
@@ -2014,6 +2019,17 @@ body .social a
     float: left;
 }
 
+.chat-icon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 55px;
+    /* float: none;
+    margin: 0 auto;
+    text-align: center;
+    display: block; */
+}
+
 .contact-info-content 
 {
     line-height: 30px;
@@ -2027,7 +2043,7 @@ body .social a
     width: 770px;
     margin: 0 auto;
     font-size: 22px;
-    color: var(--first-color);
+    color: var(--second-color);
 }
 
 .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea
@@ -2105,7 +2121,7 @@ body .social a
     display: table;
     margin: 0 auto;
     position: relative;
-    color: var(--white-color)fff;
+    color: var(--white-color);
     font-size: 16px;
 }
 
@@ -2148,7 +2164,7 @@ body .social a
     text-decoration: none;
     transition: all 0.2s linear;
     border-radius: 50px;
-    box-shadow: 0px 0px 50px 0px rgba(109, 109, 246, 0.6);
+    box-shadow: 0px 0px 50px 0px rgba(109, 109, 246, 0.4);
     box-sizing: inherit;
 }
 
@@ -2175,7 +2191,7 @@ footer ul
     clear: both;
     color: var(--white-color);
     text-align: center;
-    background-color: var(--first-color);
+    background-color: var(--second-color);
 }
 
 body .footer a
@@ -2220,6 +2236,7 @@ li.copyright-footer
     float: left;
     text-align: left;
     width: 50%;
+    margin-bottom: 10px;
 }
 
 li.social-footer 
@@ -2369,7 +2386,7 @@ li.social-footer a:first-child
         position: fixed;
         text-align: center;
         height: 100%;
-        background-color: var(--first-color);
+        background-color: var(--second-color);
         right: -100%;
         top: 77px;
         transition: right .3s ease;
@@ -2551,7 +2568,7 @@ li.social-footer a:first-child
 
     .big-number-content 
     {
-        font-size: 85px;
+        font-size: 120px;
     }
 
     span.up-text 
@@ -2666,6 +2683,7 @@ li.social-footer a:first-child
         width: 100% !important;
     }   
 
+    
 }
 
 @media screen and (max-width: 650px) {  
@@ -2716,12 +2734,12 @@ li.social-footer a:first-child
 
     .big-number 
     {
-        margin-bottom: 60px;
+        margin-bottom: 80px;
     }
 
     .big-number-content 
     {
-        font-size: 35px;
+        font-size: 85px;
         margin-top: -20px;
     }
 
@@ -2736,7 +2754,7 @@ li.social-footer a:first-child
     {    
         margin-right: 8px;    
         padding: 7px 17px 7px 17px;    
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .v-skill 
@@ -2756,7 +2774,21 @@ li.social-footer a:first-child
         margin-bottom: 5px;
     }
 
+    .big-number-full-width
+    {
+        background-size: 900px;
+    }
 }
+
+@media screen and (max-width: 470px) {
+
+    .category-filter-list .button 
+        {    
+            margin-right: 3px;    
+            padding: 3px 13px 3px 13px;    
+            font-size: 14px;
+        }
+} 
 
 @media screen and (max-width: 400px) 
 {     
@@ -2778,5 +2810,34 @@ li.social-footer a:first-child
     {
         display: block;
         text-align: center;
+    }
+
+    ul.copyright-holder{
+      font-size: 14px;  
+    }
+
+    .big-number-content 
+    {
+        font-size: 78px;
+    }
+
+    .big-number-full-width
+    {
+    background-size: 850px;
+    }
+
+    .category-filter-list .button 
+        {    
+            margin-right: 3px;    
+            padding: 3px 12px 3px 12px;    
+            font-size: 12px;
+        }
+}
+
+@media screen and (max-width: 374px) {
+
+    .big-number-full-width
+    {
+    background: none;
     }
 }
