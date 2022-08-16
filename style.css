@@ -12,10 +12,6 @@
     4.2 Single Portfolio CSS
 5. About Section CSS
 6. Clients Section CSS
-7. Team Section CSS
-8. Pricing Section CSS
-9. News Section CSS
-    9.1 Single Post CSS
 10. Contact Section CSS
 11. Footer CSS
 12. Responsive CSS
@@ -642,30 +638,51 @@ a.button.scroll:hover:after
     2. Home Section CSS
 ====================================== */
 
-#home{
-    background-color: var(--second-color);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: calc(100vh - 220px);
-    z-index: -20;
+
+#home {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(109, 109, 246, 0.4),rgba(109, 109, 246, 0.6));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-#bgvideo {
-  position: fixed;
+.content {
+    text-align: center;
+}
+
+.bgvideo {
+    position: absolute;
     right: 0;
     bottom: 0;
-    min-width: 100vw;
-    min-height: 100vh;
-    width: auto;
-    height: auto;
-    z-index: -10;
-    object-fit: cover;
-   
+    z-index: -1;
 }
 
-.gradient-overlay:before {
+ @media (min-aspect-ratio: 16/9){
+    .bgvideo {
+        width: 100%;
+        height: auto;
+    
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .bgvideo {
+        width: auto;
+        height: 100%;
+    }
+} 
+
+@media screen and (max-width: 500px) {
+    .bgvideo {
+        
+    }
+}
+
+/* .gradient-overlay:before {
   left: 0;
   top: 0;
   width: 100%;
@@ -676,13 +693,12 @@ a.button.scroll:hover:after
   background-image: var(--gradient2);
   opacity: 0.6;
   
-}
-
-
+} */
 
 .logo-home {
   display: block;
-  margin: 130px auto 0;
+  margin: 10px auto 0;
+
 }
 
 .icon-scroll,
@@ -696,8 +712,7 @@ a.button.scroll:hover:after
     width: 30px;
     height: 50px;
     margin-left: -20px;
-    bottom: 18px;
-    margin-top: -35px;
+    margin-top: 55px;
     box-shadow: inset 0 0 0 1px var(--white-color);
     border-radius: 25px;
     opacity: 0.5;
@@ -1375,569 +1390,6 @@ span.up-text
     font-weight: 400;
 }
 
-
-
-/* ===================================
-    7. Team Section CSS
-====================================== */
-
-#team
-{
-    background-image: url(images/team_bg.jpg);
-    background-color: #efefef;
-    background-position: left top;
-    background-repeat: repeat;
-    background-size: auto;
-    background-attachment: fixed;
-}
-
-
-.member 
-{
-    text-align: center;
-}
-
-
-img.member-img 
-{
-    border-radius: 90%;
-}
-
-.member .member-name 
-{
-    font-size: 25px;
-    line-height: 40px;
-    margin-top: 15px;
-    margin-bottom: 0;
-}
-
-.member .member-content 
-{
-    margin-top: 20px;
-}
-.social-holder 
-{
-    margin-bottom: 15px;
-}
-
-.social-holder .social 
-{
-    display: inline-block;
-    margin: 0 5px;
-    width: 35px;
-    height: 35px;
-    background-color: var(--second-color);
-    border-radius: 90%;
-    position: relative;
-    overflow: hidden;
-    transition: background-color .3s ease;
-}
-
-.social-holder .social:hover 
-{
-    background-color: var(--white-color);
-}
-
-body .social a 
-{
-    color: var(--white-color);
-}
-
-.social span 
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 15px;
-}
-
-
-
-/* ===================================
-    8. Pricing Section CSS
-====================================== */
-
-#pricing
-{
-    background-color: #f3f1f6;
-}
-
-.pricing-table 
-{
-    text-align: center;
-    padding-bottom: 20px;
-    border-radius: 50px;
-    overflow: hidden;
-    background-color: var(--white-color);
-    box-shadow: 0px 0px 10px 3px #ede9f3;
-}
-
-.pricing-table-title 
-{
-    background-color: var(--first-color);
-    color: var(--white-color);
-    font-size: 24px;
-    padding: 40px 0;
-    margin-bottom: 25px;
-}
-
-.pricing-table-price 
-{
-    font-size: 60px;
-    line-height: 100%;
-    color: var(--second-color);
-}
-
-.pricing-table ul 
-{
-    padding: 0;
-    list-style: none;
-    margin-top: 25px;
-}
-
-.pricing-table ul li 
-{
-    border-bottom: 1px solid #ede9f3;
-    padding: 10px 0;
-    font-weight: 400;
-}
-
-.pricing-table ul li:last-child
-{
-    border: 0;
-}
-
-.pricing-table-content-holder 
-{
-    padding: 0 10%;
-    margin-bottom: 40px;
-}
-
-.one_third.extra-width 
-{
-    width: 30%;
-    margin-right: 5%;
-}
-
-.one_third.no-margin 
-{
-    width: 33.3333%;
-    margin-right: 0;
-}
-
-
-
-/* ===================================
-    9. News Section CSS
-====================================== */
-
-
-.blog-item-holder
-{
-    text-align: center;
-    padding: 30px 0;
-}
-
-.blog-item-holder:hover 
-{
-    background-color: #f3f1f6;
-}
-
-.blog-holder .post-thumbnail
-{
-    max-width: 1070px;
-    margin: 0 auto;
-}
-
-.blog-item-holder h4 
-{
-    padding: 0;
-    max-width: 930px;
-    margin: 0 auto;
-}
-
-.blog-item-holder h4 a 
-{
-    color: var(--first-color);
-    font-size: 22px;
-    line-height: 45px;
-    font-weight: 600;    
-}
-
-.blog-item-holder:hover h4 a 
-{
-    color: var(--second-color);
-}
-
-.blog-item-holder h4 a span
-{
-    box-shadow: none !important;
-}
-
-.blog-item-holder h4 a span:after
-{
-    content: "\f061";
-    padding: 13px 14px;
-    background-color: var(--second-color);
-    display: inline-block;
-    margin-left: 20px;
-    border-radius: 90%;
-    font: normal normal normal 14px/1 FontAwesome;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-size: 15px;
-    color: var(--white-color);
-    opacity: 0;
-    transition: opacity .4s ease, box-shadow .3s ease;
-    position: absolute;    
-    box-shadow: 0px 0px 50px 0px rgba(109, 109, 246, 0.6);
-}
-
-.blog-item-holder:hover h4 a span:after
-{
-    opacity: 1;    
-}
-
-.blog-item-holder .entry-date.published, .blog-item-holder .author.vcard, .blog-item-holder .kudos
-{
-    display: inline-block;
-}
-
-.blog-item-holder .author.vcard, .blog-item-holder .kudos
-{
-    margin-left: 20px;
-}
-
-.blog-item-holder .big-circle
-{
-    width: 29px;
-    height: 29px;
-    display: inline-block;
-    vertical-align: -8px;
-    border: 1px solid;
-    border-radius: 90%;
-    position: relative;
-    color: var(--second-color);
-    transition: all .3s ease;
-}
-
-.blog-item-holder .big-circle:after 
-{
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: 7px;
-    width: 13px;
-    height: 13px;
-    border: 1px solid;
-    border-radius: 90%;
-}
-
-.blog-item-holder .big-circle:before 
-{
-    content: "";
-    position: absolute;
-    top: 13px;
-    left: 13px;
-    width: 3px;
-    height: 3px;
-    background-color: var(--second-color);
-    border-radius: 90%;
-}
-
-.blog-item-holder .big-circle:hover
-{ 
-    cursor: pointer;
-    color: #9a9a9a;    
-}
-
-.blog-item-holder .big-circle:hover:before
-{
-    background-color: #9a9a9a;
-}
-
-.blog-item-holder .post-kudo a
-{
-    display: inline-block;
-}
-
-.blog-item-holder .count
-{
-    margin-left: 5px;
-    width: 1px;
-    display: inline-block;
-}
-
-
-
-/* ===================================
-    9.1 Single Post CSS
-====================================== */
-
-.single .site-content
-{
-    background-color: var(--white-color);
-}
-
-.single h1.entry-title
-{
-    color: var(--first-color);
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 50px;
-    margin-bottom: 10px;
-    -ms-word-wrap: break-word;
-    word-wrap: break-word;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-
-.single .has-post-thumbnail h1.entry-title
-{
-    padding-top: 20px;
-}
-
-.single .entry-info
-{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 30px;
-}
-
-.single .entry-info a 
-{
-    color: #7762a1;
-}
-
-.single .entry-info a:hover 
-{
-    color: var(--second-color);
-}
-
-.single .entry-info div, .single .entry-info .cat-links ul
-{
-    display: inline-block;
-}
-
-.single .entry-info div:after 
-{
-    content: "/";
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.single .entry-info div:last-of-type:after
-{
-    display: none;
-}
-
-.single .entry-info ul 
-{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.single .entry-info ul li 
-{
-    display: inline-block;
-}
-
-.entry-info .cat-links li:after 
-{
-    content: ",";
-    padding-right: 5px;
-}
-
-.entry-info .cat-links ul li:last-child:after
-{
-    display: none;
-}
-
-.single-post-featured-image 
-{
-    text-align: center;
-    margin-bottom: 30px;
-    padding-top: 100px;
-}
-
-.single-post .entry-content
-{
-    padding: 45px 0;
-}
-
-.tags-holder
-{
-    margin: 50px 0;
-    display: inline-block;
-}
-
-.tags-holder a 
-{
-    color: var(--white-color);
-    border: 1px solid var(--second-color);
-    text-decoration: none;
-    margin-right: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: inline-block;
-    padding: 5px 17px 5px 20px;
-    font-size: 10px;
-    text-transform: uppercase;
-    background-color: var(--second-color);
-    border-radius: 50px;
-    transition: all .3s ease;
-    letter-spacing: 3px;
-}
-
-.tags-holder a:last-of-type
-{
-    margin-right: 0;
-}
-
-.tags-holder a:hover
-{
-    background-color: var(--white-color); 
-}
-
-.single .wp-link-pages span
-{
-    color: #191919;
-}
-
-.single .wp-link-pages
-{
-    color: var(--second-color);
-}
-
-.single .nav-links
-{
-    padding-bottom: 75px;
-    position: relative;
-}
-
-.single .nav-links a
-{
-    color: #7762a1;
-}
-
-.single .nav-links a:hover
-{
-    color: var(--second-color);
-}
-
-.single .nav-previous
-{
-    display: inline-block;
-    text-align: right;
-    float: left;
-    width: 46%;
-}
-
-.single .nav-next
-{
-    display: inline-block;
-    float: right;
-    width: 46%;
-    text-align: left;
-}
-
-.nav-previous a, .nav-next a
-{    
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-}
-
-.single .nav-previous a
-{
-    float: right;
-}
-
-.single .nav-previous a[rel="prev"]:before 
-{
-    content: "\f060";
-    display: block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 13px;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-bottom: 10px;
-    transition: transform .3s ease;
-}
-
-.single .nav-previous a[rel="prev"]:hover:before 
-{
-    transform: translateX(-10px);
-}
-
-.single .nav-next a
-{
-    float: left;  
-}
-
-.single .nav-next a[rel="next"]:before 
-{
-    content: "\f061";
-    display: block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 13px;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-bottom: 10px;
-    transition: transform .3s ease;
-}
-
-.single .nav-next a[rel="next"]:hover:before 
-{
-    transform: translateX(10px);
-}
-
-.nav-links .cat-links ul 
-{
-    margin: 10px 0 0 0;
-    padding: 0;
-    list-style: none;
-    line-height: 22px;
-}
-
-.nav-links .cat-links ul li
-{
-    display: inline-block;
-}
-
-.nav-links .cat-links a 
-{    
-    font-size: 11px;
-    line-height: 22px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    float: none;
-}
-
-.nav-links .cat-links li:after 
-{
-    content: ",";
-    padding-right: 5px;
-    display: inline-block;
-    font-size: 11px;
-    line-height: 22px;
-}
-
-.nav-links .cat-links li:last-child:after 
-{
-    display: none;
-}
-
-
-
 /* ===================================
     10. Contact Section CSS
 ====================================== */
@@ -2348,6 +1800,10 @@ li.social-footer a:first-child
     #header-main-menu
     {
         padding-bottom: 70px;
+    }
+
+    .break {
+        display: none;
     }
 
     .section
@@ -2789,6 +2245,10 @@ li.social-footer a:first-child
             font-size: 14px;
         }
 } 
+
+@media screen and (max-width: 470px) {
+
+}    
 
 @media screen and (max-width: 400px) 
 {     

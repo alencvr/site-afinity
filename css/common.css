@@ -328,14 +328,40 @@ sub
 /* COLUMNS */
 
 .partners {
-   display: flex;
+   max-width: 1300px;
+   margin: 0 auto;
+   display: grid;
+   
+   grid-template-areas: 
+   "partner-logo partner-logo partner-logo partner-logo partner-logo"
+   "partner-logo partner-logo partner-logo partner-logo partner-logo";
+   
+    /* display: flex;
    flex-wrap: wrap;
-   justify-content: center;
+   justify-content: center; */
 }
 
 .partner-logo {
-    margin: 10px;
-}
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+    
+    max-width: 250px;
+    min-width: 125px;
+    max-height: 120px;
+    min-height: 60px;
+}  
+
+@media screen and (max-width: 900px) {
+    .partners {
+        grid-template-areas: 
+        "partner-logo partner-logo"
+        "partner-logo partner-logo"
+        "partner-logo partner-logo"
+        "partner-logo partner-logo"
+        "partner-logo partner-logo";
+    }
+}    
 
 .one,  .one_half,  .one_third,  .two_third,  .three_fourth, 
 .one_fourth{
