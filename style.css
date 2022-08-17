@@ -1809,7 +1809,7 @@ li.social-footer a:first-child
     .section
     {
         background-attachment: scroll !important;
-        padding: 75px 0 !important;
+        /* padding: 75px 0 !important; */
     }
 
     .menu-wrapper
