@@ -359,61 +359,61 @@ function isValidEmailAddress(emailAddress) {
     return pattern.test(emailAddress);
 }
 
-var SendMail = function () {
+// var SendMail = function () {
 
-    var emailVal = jQuery('#contact-email').val();
+//     var emailVal = jQuery('#contact-email').val();
 
-    if (isValidEmailAddress(emailVal)) {
-        var params = {
-            'action': 'SendMessage',
-            'name': jQuery('#name').val(),
-            'email': jQuery('#contact-email').val(),
-            'subject': jQuery('#subject').val(),
-            'message': jQuery('#message').val()
-        };
-        jQuery.ajax({
-            type: "POST",
-            url: "php/sendMail.php",
-            data: params,
-            success: function (response) {
-                if (response) {
-                    var responseObj = jQuery.parseJSON(response);
-                    if (responseObj.ResponseData)
-                    {
-                        alert(responseObj.ResponseData);
-                    }
-                }
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                //xhr.status : 404, 303, 501...
-                var error = null;
-                switch (xhr.status)
-                {
-                    case "301":
-                        error = "Redirection Error!";
-                        break;
-                    case "307":
-                        error = "Error, temporary server redirection!";
-                        break;
-                    case "400":
-                        error = "Bad request!";
-                        break;
-                    case "404":
-                        error = "Page not found!";
-                        break;
-                    case "500":
-                        error = "Servidor está temporariamente indisponível!";
-                        break;
-                    default:
-                        error = "Erro inesperado, tente novamente depois.";
-                }
-                if (error) {
-                    alert(error);
-                }
-            }
-        });
-    } else
-    {
-        alert('Seu e-mail não está em um formato válido.');
-    }
-};
+//     if (isValidEmailAddress(emailVal)) {
+//         var params = {
+//             'action': 'SendMessage',
+//             'name': jQuery('#name').val(),
+//             'email': jQuery('#contact-email').val(),
+//             'subject': jQuery('#subject').val(),
+//             'message': jQuery('#message').val()
+//         };
+//         jQuery.ajax({
+//             type: "POST",
+//             url: "php/sendMail.php",
+//             data: params,
+//             success: function (response) {
+//                 if (response) {
+//                     var responseObj = jQuery.parseJSON(response);
+//                     if (responseObj.ResponseData)
+//                     {
+//                         alert(responseObj.ResponseData);
+//                     }
+//                 }
+//             },
+//             error: function (xhr, ajaxOptions, thrownError) {
+//                 //xhr.status : 404, 303, 501...
+//                 var error = null;
+//                 switch (xhr.status)
+//                 {
+//                     case "301":
+//                         error = "Redirection Error!";
+//                         break;
+//                     case "307":
+//                         error = "Error, temporary server redirection!";
+//                         break;
+//                     case "400":
+//                         error = "Bad request!";
+//                         break;
+//                     case "404":
+//                         error = "Page not found!";
+//                         break;
+//                     case "500":
+//                         error = "Servidor está temporariamente indisponível!";
+//                         break;
+//                     default:
+//                         error = "Erro inesperado, tente novamente depois.";
+//                 }
+//                 if (error) {
+//                     alert(error);
+//                 }
+//             }
+//         });
+//     } else
+//     {
+//         alert('Seu e-mail não está em um formato válido.');
+//     }
+// };

@@ -8,12 +8,11 @@
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
           <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-          
-          <link href='http://fonts.googleapis.com/css?family=League+Script%7CPoppins:300,400,500,600,700%7CMontserrat:900' rel='stylesheet' type='text/css'>		
           <link rel="preconnect" href="https://fonts.googleapis.com">
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
           <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
           <link rel="stylesheet" type="text/css"  href='style.css' />
+					<script src="https://kit.fontawesome.com/60df67a8f7.js" crossorigin="anonymous"></script>
 
               
       </head>
@@ -79,6 +78,7 @@
                           <video autoplay loop muted plays-inline class="bgvideo"> 
                             <source src="./videos/video_preview_h264.mp4" type="video/mp4" >
                           </video>
+													<img class="home-image" src="./images/home_img.jpg" alt="Happy family together">
                           <div class="content">
                             <img class="logo-home center" src="./images/afinitywhite-logo.svg" alt="Logo Afinity">
                             <p class="intro-description center">Somos pessoas protegendo pessoas.</p>
@@ -360,34 +360,40 @@
                                   <p>Se você não encontrou o produto ideal ou tem dúvidas com relação a melhor proteção para você e sua família, nos envie um e-mail para um atendimento personalizado!</p>
                                   <p>&nbsp;</p>
                                   <div class="contact-info">
-                                    <span class="fa fa-mobile"></span>
+                                    <span class="fa fa-mobile-screen-button"></span>
                                     <p class="contact-info-content">(85) 3268 - 2070</p>
                                   </div>
                                   <div class="contact-info">
-                                    <span class="fa fa-globe"></span>
+                                    <span class="fa fa-whatsapp"></span>
                                     <p class="contact-info-content">
                                       (85) 9 9965 - 0809</p>
                                     </div>
                                   
                                     <div class="contact-info">
-                                        <span class="fa fa-map-marker"></span>
-                                        <p class="contact-info-content">Av. Santos Dumont, 1740 - Salas 211, 213 e 214 - Aldeota, Fortaleza - CE</p>
+                                        <span class="fa fa-location-dot"></span>
+                                        <p class="contact-info-content">Av. Santos Dumont, 1740 - Salas 211, 213 e 214 - Fortaleza, CE</p>
                                     </div>
                                   
                                     <div class="contact-info">
-                                      <span class="fa fa-envelope"></span>
+                                      <span class="fa fa-envelope-circle-check"></span>
                                       <p class="contact-info-content">atendimento@grupoafinity.com.br</p>
                                     </div>
                               </div>                        
 
-                              <div class="contact-page-right">                        
-                                  <div class="contact-form">
-                                      <p><input id="name" type="text" name="your-name" placeholder="Nome"></p>
-                                      <p><input id="contact-email" type="email" name="your-email" placeholder="E-mail"></p>
-                                      <p><input id="subject" type="text" name="your-subject" placeholder="Assunto"></p>
-                                      <p><textarea id="message" name="your-message" placeholder="Mensagem"></textarea></p>
-                                      <p class="contact-submit-holder"><input type="submit" onClick="SendMail()" value="ENVIAR"></p>                                
-                                  </div>  
+                              <div class="contact-page-right">     
+                                    <div class="contact-form">
+                                        <form action="https://formsubmit.co/contato@afinitycorretora.com.br" method="POST">
+                                            <p><input id="name" type="text" name="your-name" placeholder="Nome" required></p>
+                                            <p><input id="contact-email" type="email" name="your-email" placeholder="E-mail" required></p>
+                                            <p><input id="subject" type="text" name="your-subject" placeholder="Assunto" required></p>
+                                            <p><textarea id="message" name="your-message" placeholder="Mensagem" required></textarea></p>
+                                            <input type="hidden" name="_captcha" value="false">
+                                            <input type="hidden" name="_next" value="https://afinitycorretora.com.br/thanks.html">
+                                            <p class="contact-submit-holder"><input type="submit" onClick="SendMail()" value="ENVIAR"></p>                                
+                                        </form>
+                                    </div> 
+
+                              
                               </div>
                               <div class="clear"></div>
                           </div>                
@@ -411,7 +417,7 @@
               </footer>
           </div>
 
-          <!--Load JavaScript-->
+          
           <script type="text/javascript" src="js/jquery.js"></script>			                                       
           <script type="text/javascript" src="js/jquery.sticky.js"></script>			                                       
           <script type='text/javascript' src='js/imagesloaded.pkgd.js'></script>                

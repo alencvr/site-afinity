@@ -1,9 +1,8 @@
 /*------------------------------------------------------------------
-[Table of contents]
 1. Global CSS
     1.2 Global Button CSS
     1.3 Global Image/Text Slider CSS
-    1.4 Global Curve/Intro/Big/Medium Text CSS
+    1.4 Global Intro/Big/Medium Text CSS
     1.5 Global Page CSS
 2. Home Section CSS
 3. Services Section CSS
@@ -12,9 +11,9 @@
     4.2 Single Portfolio CSS
 5. About Section CSS
 6. Clients Section CSS
-10. Contact Section CSS
-11. Footer CSS
-12. Responsive CSS
+7. Contact Section CSS
+8. Footer CSS
+9. Responsive CSS
 -------------------------------------------------------------------*/
 
 
@@ -544,15 +543,6 @@ a.button.scroll:hover:after
     1.4 Global Curve/Intro/Big/Medium Text CSS
 ====================================== */
 
-.curve-text 
-{
-    font-family: 'League Script', sans-serif;
-    font-weight: 400;
-    color: var(--white-color);
-    font-size: 120px;
-    line-height: 150px;
-}
-
 .intro-description
 {
     font-size: 32px;
@@ -661,6 +651,7 @@ a.button.scroll:hover:after
     z-index: -1;
 }
 
+
  @media (min-aspect-ratio: 16/9){
     .bgvideo {
         width: 100%;
@@ -676,7 +667,9 @@ a.button.scroll:hover:after
     }
 } 
 
-
+.home-image {
+    display: none;
+}
 
 .logo-home {
   display: block;
@@ -1098,14 +1091,60 @@ div.pp_default .pp_nav .currentTextHolder
     4.2 Single Portfolio CSS
 ====================================== */
 
-#portfolio1
-{
+#portfolio1{
     background-image: url(images/item_background_02.jpg);
     background-color: #6953df;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
+
+
+#thanks {
+    background-color: var(--white-color);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 550px;
+    
+}
+
+.tittle-thanks {
+    font-size: 35px;
+    line-height: 50px;
+    color: var(--second-color);
+    text-align: left;
+   
+}
+
+@media screen and (max-width: 749px) {
+    #thanks {
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    #thanks {
+        height: 490px;
+    }
+
+    .little-thanks {
+        margin-left: 20px;
+    }
+}
+@media screen and (min-width: 970px) {
+    #thanks {
+        height: 430px;
+    }
+}
+@media screen and (min-width: 1020px) {
+    #thanks {
+        height: 390px;
+    }
+}
+
+
+
 
 #portfolio2
 {
@@ -1374,7 +1413,7 @@ span.up-text
 }
 
 /* ===================================
-    10. Contact Section CSS
+    7. Contact Section CSS
 ====================================== */
 
 #contact
@@ -1470,6 +1509,8 @@ span.up-text
     line-height: 30px;
     display: table;
     text-align: left;
+    color: var(--white-color) !important;
+    all: unset;
 }
 
 .contact-form
@@ -1545,7 +1586,7 @@ span.up-text
     height: 150px;
 }
 
-.contact-form input[name="your-name"]
+.contact-form input[name="name"]
 {
     margin-top: 0;
     padding-top: 0;
@@ -1582,10 +1623,11 @@ span.up-text
 
 .contact-form input[type=submit]
 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Biennale', sans-serif;
     display: inline-block;
     font-weight: 300;
     border: none;
+    all: unset;
     color: var(--white-color);
     background-color: var(--second-color);
     text-align: center;
@@ -1598,15 +1640,15 @@ span.up-text
     font-size: 16px;
     text-decoration: none;
     transition: all 0.2s linear;
-    border-radius: 50px;
-    box-shadow: 0px 0px 50px 0px rgba(109, 109, 246, 0.4);
+    border-radius: 30px;
+    box-shadow: 0px 0px 50px 0px rgba(109, 109, 246, 0.3);
     box-sizing: inherit;
 }
 
 
 
 /* ===================================
-    11. Footer CSS
+    8. Footer CSS
 ====================================== */
 
 
@@ -1693,7 +1735,7 @@ li.social-footer a:first-child
 
 
 /* ===================================
-    12. Responsive CSS
+    9. Responsive CSS
 ====================================== */
 
 
@@ -1779,6 +1821,22 @@ li.social-footer a:first-child
 }
 
 @media screen and (max-width: 1020px) {   
+
+
+    #home {
+    background-image: url(./images/home_img.jpg);
+    background-color: var(--second-color);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: calc(100vh - 220px);
+
+    }
+
+    .bgvideo {
+        display: none;
+    }
 
     #header-main-menu
     {
@@ -2154,11 +2212,6 @@ li.social-footer a:first-child
 
 @media screen and (max-width: 630px) 
 {  
-    .curve-text
-    {
-        font-size: 90px;
-        line-height: 105px;    
-    }
 
     .intro-description
     {
@@ -2244,7 +2297,7 @@ li.social-footer a:first-child
 } 
 
 
-@media screen and (max-width: 400px) 
+@media screen and (max-width: 399px) 
 {     
 
     .blog-item-holder .entry-date.published
@@ -2255,7 +2308,7 @@ li.social-footer a:first-child
     .contact-info span 
     {
         float: none;
-        margin: 0 auto;
+        margin: 0 auto 15px;
         text-align: center;
         display: block;
     }
@@ -2286,6 +2339,22 @@ li.social-footer a:first-child
             padding: 3px 12px 3px 12px;    
             font-size: 12px;
         }
+}
+
+@media screen and (min-width:400px) and (max-width:1020px) {
+    .contact-info span {
+        float: none;
+        margin-right: 13px;
+        text-align: center;
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 @media screen and (max-width: 374px) {
