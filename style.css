@@ -1433,7 +1433,7 @@ span.up-text
   
 }
 
-.instagram {
+.instagram, .whatsapp {
   padding: 15px;
   width: 50px;
 }
@@ -1824,7 +1824,7 @@ li.social-footer a:first-child
 
 
     #home {
-    background-image: url(./images/home_img.jpg);
+    background-image: url(./images/home_img_01.jpg);
     background-color: var(--second-color);
     background-position: center center;
     background-repeat: no-repeat;
