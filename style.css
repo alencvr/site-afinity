@@ -393,6 +393,50 @@ a.button.scroll:hover:after
     transform: rotate(90deg);
 }
 
+a.button1
+{
+    display: inline-block;
+    color: var(--white-color) !important;
+    background-image: var(--gradient2);
+    text-align: left;
+    padding-bottom: 17px;
+    padding-top: 17px;
+    padding-left: 23px;
+    padding-right: 23px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: none;
+    transition: all .2s linear;
+    margin-bottom: 17px;
+    border-radius: 50px;
+    font-size: 16px;    
+    box-shadow: 0px 0px 50px 0px rgba(109, 109, 246, 0.4);
+    z-index: 20;
+    margin-top: 20px;
+}
+
+a.button1:after 
+{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f061";
+    margin-left: 25px;
+    transition: transform .3s ease;
+}
+
+a.button1:hover:after
+{
+    transform: translateX(5px);
+}
+
+a.button1.scroll:hover:after
+{
+    transform: rotate(90deg);
+}
 
 /* ===================================
     1.3 Global Image/Text Slider CSS
@@ -616,6 +660,24 @@ a.button.scroll:hover:after
     color: var(--first-color);
 }
 
+.page-description2 {
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--first-color);
+}
+
+.page-sub {
+    text-align: center;
+    font-size: 23px;
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 29px;
+    color: var(--first-color);
+}
+
 .page .page-content
 {
     background-color: var(--white-color);
@@ -632,13 +694,27 @@ a.button.scroll:hover:after
 #home {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(109, 109, 246, 0.4),rgba(109, 109, 246, 0.6));
+    background-image: url(./images/home_img_01.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
+/* #home {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(109, 109, 246, 0.4),rgba(109, 109, 246, 0.6));
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+} */
 
 .content {
     text-align: center;
@@ -651,22 +727,6 @@ a.button.scroll:hover:after
     z-index: -1;
 }
 
-
- @media (min-aspect-ratio: 16/9){
-    .bgvideo {
-        width: 100%;
-        height: auto;
-    
-    }
-}
-
-@media (max-aspect-ratio: 16/9){
-    .bgvideo {
-        width: auto;
-        height: 100%;
-    }
-} 
-
 .home-image {
     display: none;
 }
@@ -674,6 +734,7 @@ a.button.scroll:hover:after
 .logo-home {
   display: block;
   margin: 10px auto 0;
+
 
 }
 
@@ -800,6 +861,11 @@ a.service-link
     width: 54px;
     height: 54px;
     box-shadow: 0px 0px 50px 0px rgba(109, 109, 246, 0.4);
+}
+
+.full-image {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 a.service-link:hover
@@ -1004,6 +1070,11 @@ a.service-link:after
     transition-delay: .1s;
 }
 
+.cotac {
+	display: flex;
+	align-items: center;
+}
+
 
 /* ===================================
     4.1 Portfolio PopUp CSS
@@ -1093,7 +1164,7 @@ div.pp_default .pp_nav .currentTextHolder
 
 #portfolio1{
     background-image: url(images/item_background_02.jpg);
-    background-color: #6953df;
+    background-color: #11007e;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 100% auto;
@@ -1194,7 +1265,7 @@ div.pp_default .pp_nav .currentTextHolder
 
 .single.single-portfolio .content-wrapper 
 {
-    padding: 50px 8px;
+    padding: 50px 30px;
     margin-bottom: 30px;
 }
 
@@ -1212,7 +1283,7 @@ div.pp_default .pp_nav .currentTextHolder
 
 .single.single-portfolio .one_half, .single.single-portfolio .one_third, .single.single-portfolio .two_third, .single.single-portfolio .three_fourth, 
 .single.single-portfolio .one_fourth{
-    margin-right: 10%;
+    margin-right: 8%;
 }
 
 .single.single-portfolio .one_half
@@ -2129,6 +2200,7 @@ li.social-footer a:first-child
         transition-delay: 0s;
     }
 
+
 }
 
 
@@ -2185,6 +2257,10 @@ li.social-footer a:first-child
 
 @media screen and (max-width: 650px) {  
 
+	.cotac {
+		display: block;
+	}
+
     .single .entry-info div, .single .entry-info .cat-links ul
     {
         display: block;
@@ -2208,10 +2284,15 @@ li.social-footer a:first-child
         letter-spacing: 3px;
     }    
 
+    .page-description2 .page-sub {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
 }
 
-@media screen and (max-width: 630px) 
-{  
+@media screen and (max-width: 630px) {
+	
 
     .intro-description
     {
